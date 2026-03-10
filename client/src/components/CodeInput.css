@@ -1,0 +1,224 @@
+.code-input {
+  overflow: hidden;
+}
+
+.code-input-header {
+  padding: 4px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.mode-tabs {
+  display: flex;
+  gap: 2px;
+}
+
+.mode-tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: transparent;
+  border: none;
+  color: var(--text-tertiary);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.mode-tab:hover {
+  color: var(--text-secondary);
+  background: var(--bg-tertiary);
+}
+
+.mode-tab.active {
+  color: var(--text-primary);
+  background: var(--bg-tertiary);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Paste Mode */
+.paste-mode {
+  display: flex;
+  flex-direction: column;
+}
+
+.paste-controls {
+  display: flex;
+  gap: 16px;
+  padding: 16px 20px 12px;
+}
+
+.paste-field {
+  flex: 1;
+}
+
+.editor-wrapper {
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  overflow: hidden;
+}
+
+.editor-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 320px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.paste-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+}
+
+.char-count {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* GitHub Mode */
+.github-mode {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.github-url-hint {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  padding: 8px 12px;
+  background: var(--bg-primary);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--accent-primary);
+}
+
+.github-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.github-field-row {
+  display: flex;
+  gap: 12px;
+}
+
+.github-actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* PR Preview */
+.pr-preview {
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+}
+
+.pr-preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.pr-preview-header h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  flex: 1;
+}
+
+.pr-preview-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.pr-preview-stats {
+  display: flex;
+  gap: 16px;
+  font-size: 0.8rem;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-light);
+  margin-bottom: 12px;
+}
+
+.stat-add { color: var(--success); font-weight: 600; }
+.stat-del { color: var(--danger); font-weight: 600; }
+
+.pr-files-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.pr-file-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.pr-file-item:hover {
+  background: var(--bg-tertiary);
+}
+
+.pr-file-status {
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.pr-file-status.added { background: var(--success-bg); color: var(--success); }
+.pr-file-status.modified { background: var(--warning-bg); color: var(--warning); }
+.pr-file-status.removed { background: var(--danger-bg); color: var(--danger); }
+.pr-file-status.renamed { background: var(--info-bg); color: var(--info); }
+
+.pr-file-name {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pr-file-changes {
+  display: flex;
+  gap: 8px;
+  font-size: 0.7rem;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.pr-files-more {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  padding: 4px 8px;
+  font-style: italic;
+}
